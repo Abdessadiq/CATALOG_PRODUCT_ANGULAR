@@ -15,6 +15,11 @@
             <td>{{ p.id }}</td>
             <td>{{ p.name }}</td>
             <td>{{ p.price }}</td>
+            <td>
+              <button (click)="handleDeleteProduct(p)" class="btn btn-dark" bt>
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>

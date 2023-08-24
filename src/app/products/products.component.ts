@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  products: Array<any> | undefined;
+  products!: Array<any>;
 
   constructor() {}
 
@@ -21,5 +21,11 @@ export class ProductsComponent implements OnInit {
       { id: 7, name: 'souris', price: 12000 },
       { id: 8, name: 'ecran', price: 12000 },
     ];
+  }
+
+  handleDeleteProduct(product:any) {
+    let index = this.products.indexOf(product);
+    this.products.splice(index,1);
+
   }
 }
